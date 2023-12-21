@@ -2,28 +2,24 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 	"strconv"
 	"strings"
 )
 
 /*
-
 Fuel required to launch a given module is based on its mass. Specifically, to
 find the fuel required for a module, take its mass, divide by three, round
 down, and subtract 2.
-
 */
 func Fuel(mass int) int {
 	return mass/3 - 2
 }
 
 /*
-
 ...calculate its fuel and add it to the total. Then, treat the fuel amount you
 just calculated as the input mass and repeat the process, continuing until a
 fuel requirement is zero or negative.
-
 */
 func Fuel2(mass int) int {
 	sum := 0
@@ -43,7 +39,7 @@ func Fuel2(mass int) int {
 }
 
 func main() {
-	dat, err := ioutil.ReadFile("advent01.txt")
+	dat, err := os.ReadFile("advent01.txt")
 	if err != nil {
 		panic(err)
 	}

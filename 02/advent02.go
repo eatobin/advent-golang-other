@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -43,7 +43,7 @@ func FixRun(noun int, verb int, rr []int) int {
 }
 
 func main() {
-	dat, err := ioutil.ReadFile("advent02.txt")
+	dat, err := os.ReadFile("advent02.txt")
 	if err != nil {
 		panic(err)
 	}
