@@ -250,7 +250,7 @@ func part2(r []Value) {
 }
 
 func main() {
-	r := LoadRegisters("advent13.txt")
+	r := LoadRegisters("advent13.csv")
 	part1(r)
 	part2(r)
 }
