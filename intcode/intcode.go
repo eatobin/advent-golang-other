@@ -1,7 +1,7 @@
 package intcode
 
 import (
-	"io/ioutil"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -159,7 +159,7 @@ func RunWithRead(r []Value, chIn, chOut, chRead chan Value) {
 }
 
 func LoadRegisters(path string) []Value {
-	dat, err := ioutil.ReadFile(path)
+	dat, err := os.ReadFile(path)
 	if err != nil {
 		panic(err)
 	}
